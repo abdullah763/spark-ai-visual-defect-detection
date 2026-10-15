@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Dataset
+data/*
+!data/.gitkeep
+!data/README.md
+
+# Model checkpoints
+models/*
+!models/.gitkeep
+
+# Generated outputs
+outputs/*
+!outputs/metrics/
+!outputs/plots/
+!outputs/error_analysis/
+
+# Logs
+*.log
+
+# Environment files
+.env
