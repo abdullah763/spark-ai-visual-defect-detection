@@ -32,3 +32,16 @@ outputs/*
 
 # Environment files
 .env
+
+# Generated evaluation/audit outputs
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+
+outputs/plots/*
+!outputs/plots/.gitkeep
+
+outputs/error_analysis/false_positives/*
+!outputs/error_analysis/false_positives/.gitkeep
+
+outputs/error_analysis/false_negatives/*
+!outputs/error_analysis/false_negatives/.gitkeep
