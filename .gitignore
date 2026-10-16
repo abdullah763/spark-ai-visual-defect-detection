@@ -45,3 +45,15 @@ outputs/error_analysis/false_positives/*
 
 outputs/error_analysis/false_negatives/*
 !outputs/error_analysis/false_negatives/.gitkeep
+
+# Final assessment artifacts tracked in Git
+!outputs/
+!outputs/metrics/
+outputs/metrics/*
+!outputs/metrics/training_history.csv
+!outputs/metrics/test_metrics.json
+
+!outputs/plots/
+outputs/plots/*
+!outputs/plots/confusion_matrix.png
+!outputs/plots/training_curves.png
