@@ -21,8 +21,18 @@ def create_test_image() -> bytes:
     return buffer.getvalue()
 
 
-def test_health_without_model():
+def test_health_without_model(monkeypatch, tmp_path):
     """Health endpoint should report degraded when no model is loaded."""
+
+    missing_model = tmp_path / "missing_model.pth"
+
+    monkeypatch.setattr(
+        api_module,
+        "BEST_MODEL_PATH",
+        missing_model,
+    )
+
+    api_module.model = None
 
     with TestClient(api_module.app) as client:
         response = client.get("/health")
@@ -36,8 +46,18 @@ def test_health_without_model():
     assert "device" in data
 
 
-def test_predict_without_model():
+def test_predict_without_model(monkeypatch, tmp_path):
     """Prediction should fail cleanly when no trained model exists."""
+
+    missing_model = tmp_path / "missing_model.pth"
+
+    monkeypatch.setattr(
+        api_module,
+        "BEST_MODEL_PATH",
+        missing_model,
+    )
+
+    api_module.model = None
 
     with TestClient(api_module.app) as client:
         response = client.post(
