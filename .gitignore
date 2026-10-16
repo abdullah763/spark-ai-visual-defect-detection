@@ -57,3 +57,4 @@ outputs/metrics/*
 outputs/plots/*
 !outputs/plots/confusion_matrix.png
 !outputs/plots/training_curves.png
+SparkAI_Solution_demo_EDITED_SAFE.mp4
