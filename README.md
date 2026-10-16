@@ -90,6 +90,11 @@ ok_front  -> 0 -> Normal
 def_front -> 1 -> Defective
 ```
 
+## Demo and Trained Model
+
+The final demo video and trained ResNet18 checkpoint are available in the
+[v1.0.0 GitHub Release](https://github.com/abdullah763/spark-ai-visual-defect-detection/releases/tag/v1.0.0).
+
 ### Dataset audit
 
 | Property | Result |
